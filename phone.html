@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="thePhone.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="holder">
+        <div class="container">
+            <div id="screen">
+                <nav></nav>
+            </div>
+            <div id="screen1">
+                <nav>
+                    <div class="mtn-div">
+                        <p>MTN Nigeria</p>
+                    </div>
+                    <div class="camera-div">
+                        <span class="material-symbols-outlined" id="lock">lock</span>
+                        <div class="camera"></div>
+                    </div>
+                    <div class="icon-div">
+                        <span class="material-symbols-outlined" id="lock">signal_cellular_alt</span>
+                        <span class="material-symbols-outlined" id="lock">5g</span>
+                        <span class="material-symbols-outlined" id="lock">battery_horiz_050</span>
+                    </div>
+                </nav>
+                <div class="time-container">
+                    <div class="time-div">
+                        <p>Click to unlock</p>
+                        <h1 id="time"></h1>
+                    </div>
+                    <div class="low-bar"><button onclick="unlockPhone()"></button></div>
+                </div>
+            </div>
+            <div id="screen2">
+                <nav>
+                    <div class="camera-div">
+                        <span class="material-symbols-outlined" id="lock">lock</span>
+                        <div class="camera"></div>
+                    </div>
+                </nav>
+                <div class="key-pad">
+                    <div class="header">
+                        <h4>Enter Passcode</h4>
+                        <p>Your passcode is required </p>
+                        <div class="pin-output">
+                            <div class="pin-dot" id="dot1"></div>
+                            <div class="pin-dot" id="dot2"></div>
+                            <div class="pin-dot" id="dot3"></div>
+                            <div class="pin-dot" id="dot4"></div>
+                            <div class="pin-dot" id="dot5"></div>
+                            <div class="pin-dot" id="dot6"></div>
+                        </div>
+                    </div>
+                    <div class="pads">
+                        <button onclick="printNum(1)">1</button>
+                        <button onclick="printNum(2)">2</button>
+                        <button onclick="printNum(3)">3</button>
+                        <button onclick="printNum(4)">4</button>
+                        <button onclick="printNum(5)">5</button>
+                        <button onclick="printNum(6)">6</button>
+                        <button onclick="printNum(7)">7</button>
+                        <button onclick="printNum(8)">8</button>
+                        <button onclick="printNum(9)">9</button>
+                        <button onclick="printNum(0)">0</button>
+                    </div>
+
+                </div>
+            </div>
+            <div id="screen3">
+                <nav>
+                    <div class="mtn-div">
+                        <p>MTN Nigeria</p>
+                    </div>
+                    <div class="camera-div">
+                        <div class="camera"></div>
+                    </div>
+                    <div class="icon-div">
+                        <span class="material-symbols-outlined" id="lock">signal_cellular_alt</span>
+                        <span class="material-symbols-outlined" id="lock">5g</span>
+                        <span class="material-symbols-outlined" id="lock">battery_horiz_050</span>
+                    </div>
+                </nav>
+                <div class="home-screen" id="homeScreen">
+                    <div class="apps">
+                        <button onclick="showAlarm()"><img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKcRunKz7PJHd7_h2vGjb39gHmABCvTLsfGw&s"
+                                alt=""></button>
+                        <button onclick="showBMI()"><img src="https://cdn-icons-png.flaticon.com/512/10476/10476452.png"
+                                alt=""></button>
+                        <button onclick="showRecharge()"><img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu89x_7XW8-GoQWKBBJNTE_69qhqMnQv_-ZQ&s"
+                                alt=""></button>
+                        <button onclick="showMusic()"><img
+                                src="https://img.freepik.com/premium-vector/music-play-button-colorful-logo-vector-template_349893-14.jpg"
+                                alt=""></button>
+                        <button onclick=""><img src="https://t4.ftcdn.net/jpg/03/49/37/73/360_F_349377375_ffnj0RHK52KsooH7IBdtpjNtdEP7bKM7.jpg" alt=""></button>
+                        <button onclick="showTodo()"><img src="https://cdn-icons-png.freepik.com/256/8476/8476658.png" alt=""></button>
+                        <button><img src="https://img.freepik.com/premium-photo/wooden-gear-teeth-with-word-sensor-concept-sensor-device-scanning-device_694006-1061.jpg" alt=""></button>
+                        <button></button>
+                    </div>
+                    <div class="apps">
+                        <button onclick="showCalls()"><img src="phoneimg-removebg-preview.png" alt=""></button>
+                        <button onclick="openCam()" id="openCamBtn"><img
+                                src="https://images.wootechy.com/article/iphone-camera-icon-missing.jpg"
+                                alt=""></button>
+                        <button><img
+                                src="https://w7.pngwing.com/pngs/630/547/png-transparent-message-icon-illustration-iphone-computer-icons-message-ios-message-icon-miscellaneous-leaf-grass.png"
+                                alt=""></button>
+                    </div>
+
+                </div>
+                <div id="camera">
+                    <button id="back" onclick="back()"><span
+                            class="material-symbols-outlined">arrow_back_ios</span></button>
+                    <video id="camVid" autoplay></video>
+                </div>
+                <div id="calls">
+                    <div id="myKeys">
+                        <button id="back" onclick="back()"><span
+                                class="material-symbols-outlined">arrow_back_ios</span></button>
+                        <div class="dailer-output">
+                            <h3 id="output"></h3>
+                        </div>
+                        <div class="dailer">
+                            <button onclick="printN(1)">1</button>
+                            <button onclick="printN(2)">2</button>
+                            <button onclick="printN(3)">3</button>
+                            <button onclick="printN(4)">4</button>
+                            <button onclick="printN(5)">5</button>
+                            <button onclick="printN(6)">6</button>
+                            <button onclick="printN(7)">7</button>
+                            <button onclick="printN(8)">8</button>
+                            <button onclick="printN(9)">9</button>
+                            <button onclick="printN('*')">*</button>
+                            <button onclick="printN(0)">0</button>
+                            <button onclick="printN('#')">#</button>
+                            <button onclick="dail()"><span class="material-symbols-outlined">call</span></button>
+                            <button onclick="deli()"><span class="material-symbols-outlined">backspace</span></button>
+
+                        </div>
+                    </div>
+                    <div id="myContacts">
+                        <button id="back" onclick="back()"><span
+                                class="material-symbols-outlined">arrow_back_ios</span></button>
+                        <div class="contact">
+                            <span id="cont-span">
+                                <h2>Contacts</h2><span class="material-symbols-outlined" onclick="addNew()"
+                                    id="addSym">add</span>
+                            </span>
+                            <div class="contact-list" id="contList">
+                                <input type="text" placeholder="Search Contact">
+                                <ul id="lists">
+
+                                </ul>
+                            </div>
+                            <form action="" id="forms">
+                                <h4>Add new contact</h4>
+                                <input type="file" placeholder="Select Photo" id="photo">
+                                <input type="text" placeholder="First name" id="firstName">
+                                <input type="text" placeholder="Last name" id="lastName">
+                                <input type="text" placeholder="Phone number" id="phoneNum">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="lower-pads">
+                        <button><span class="material-symbols-outlined">star</span><small>Favourite</small></button>
+                        <button><span class="material-symbols-outlined">schedule</span><small>Recent</small></button>
+                        <button onclick="showContact()"><span
+                                class="material-symbols-outlined">group</span><small>Contacts</small></button>
+                        <button onclick="showKeypad()"><span
+                                class="material-symbols-outlined">keyboard</span><small>Keypad</small></button>
+                        <button><span
+                                class="material-symbols-outlined">voicemail</span><small>Voicemail</small></button>
+                    </div>
+                </div>
+                <div id="calling">
+
+                    <p id="dailingNum"></p>
+
+                    <button onclick="endCall()"><img
+                            src="https://e7.pngegg.com/pngimages/145/522/png-clipart-end-call-button-telephone-call-button-computer-icons-button-text-trademark.png"
+                            alt=""></button>
+
+                </div>
+                <div id="alarm">
+                    <button id="back" onclick="back()"><span
+                            class="material-symbols-outlined">arrow_back_ios</span></button>
+                    <div id="alarmHolder">
+                        <!-- <div class="alarm-div"> -->
+                        <span id="cont-span">
+                            <h2>Alarm</h2><span class="material-symbols-outlined" onclick="addAlarm()"
+                                id="addSym">add</span>
+                        </span>
+                        <form action="">
+                            <h4>Set an alarm</h4>
+                            <h1 id="timee"></h1>
+                            <input type="time" id="setTime">
+                            <!-- <input type="date" id="setDate"> -->
+                        </form>
+
+                        <div id="myAlarms">
+
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                    <div id="stopwatch">
+                        <h1>Stopwatch</h1>
+                        <h2 id="display"></h2>
+                        <div>
+                            <button id="startBtn" onclick="startStop()">Start</button>
+                            <button id="reset" onclick="reset()">Reset</button>
+                        </div>
+                    </div>
+                    <!-- <div id="timer">
+                        <h1>Timer</h1>
+                        <h2 id="display"></h2>
+                        <div>
+                            <h2>Currently unavailable</h2>
+                        </div>                        
+                    </div> -->
+                    <div class="lower-pads">
+                        <button><span
+                                class="material-symbols-outlined">language</span><small>WorldClock</small></button>
+                        <button onclick="openAlarm()"><span
+                                class="material-symbols-outlined">alarm</span><small>Alarm</small></button>
+                        <button onclick="openStopwatch()"><span
+                                class="material-symbols-outlined">timer</span><small>Stopwatch</small></button>
+                        <button><span class="material-symbols-outlined">av_timer</span><small>Timer</small></button>
+                    </div>
+
+
+                </div>
+                <div id="bmiCalc">
+                    <button id="back" onclick="back()"><span
+                            class="material-symbols-outlined">arrow_back_ios</span></button>
+                    <div class="bmi-holder">
+                        <h1>BMI Calculator</h1>
+                        <label for="Mass">Mass (Kg)</label>
+                        <input type="number" id="mass" placeholder="Enter Weight">
+                        <label for="height">Height</label>
+                        <input type="number" id="height" placeholder="Enter Height (Inches)">
+                        <button onclick="check()">Check BMI</button>
+                        <h3 id="display1"></h3>
+                        <h3 id="display2"></h3>
+                    </div>
+
+                </div>
+                <div id="recharge">
+                    <button id="back" onclick="back()"><span
+                            class="material-symbols-outlined">arrow_back_ios</span></button>
+                    <div>
+                        <section>
+                            <label for="provider"> Provider </label>
+                            <select name="" id="provider">
+                                <option value=""> choose provider </option>
+                                <option value="mtn"> mtn </option>
+                                <option value="glo"> glo </option>
+                                <option value="airtel"> airtel </option>
+                                <option value="9mobile"> 9mobile </option>
+                            </select>
+
+                        </section>
+                        <section>
+                            <label for="amount"> Amount </label>
+                            <select name="" id="amount">
+                                <option value=""> choose amount </option>
+                                <option value="1000"> 1000 </option>
+                                <option value="500"> 500 </option>
+                                <option value="200"> 200 </option>
+                                <option value="100"> 100 </option>
+                            </select>
+
+                        </section>
+
+                        <button onclick="generate()">Generate</button>
+
+                        <h3>PIN : <span id="showPin"> </span> </h3>
+
+                        <table id="table">
+                            <thead id="thead">
+                                <th> Provider </th>
+                                <th> Amount </th>
+                                <th> Pin </th>
+                                <th> Used </th>
+                            </thead>
+                            <tbody id="tbody">
+                                <tr>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="music">
+                    <div class="top">
+                        <button id="back" onclick="back()"><span class="material-symbols-outlined">arrow_back_ios</span></button>
+                        <button id="musicList"><span class="material-symbols-outlined">list</span></button>
+                    </div>
+                    <div id="list"></div>
+                    <div id="music-holder">
+                        <div class="details">
+                            <h2 id="title"></h2>
+                            <img src="" id="image">
+                            <p id="artist"></p>
+                        </div>
+                        <div class="controls">
+                            <button onclick="prev()"><span class="material-symbols-outlined">arrow_back</span></button>
+                            <button onclick="play()" id="play">Play</button>
+                            <button onclick="next()"><span class="material-symbols-outlined">arrow_forward</span></button>
+                        </div>
+                        <div class="progress">
+                            <div id="progress-bar"></div>
+                        </div>
+                        <audio id="audio" src=""></audio>
+                    </div>
+
+                </div>
+                <div id="todo">
+                    <button id="back" onclick="back()"><span class="material-symbols-outlined">arrow_back_ios</span></button>
+                    <div class="todo-app">
+                        <h1>Todo App</h1>
+                        <div>
+                            <form id="tdForm1">
+                                <input type="text" id="tdInput1" placeholder="Add a new task">
+                                <button onclick="add()" type="button" class="mybtn">Add</button>
+                            </form>
+            
+                            <form id="tdForm2">
+                                <input type="text" id="tdInput2" placeholder="Add a new task">
+                                <button onclick="editText()" type="button" class="mybtn">Add</button>
+                            </form>
+                        </div>
+                        <ul id="tdList" class="list-dv">
+            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btnDiv"><button onclick="changeScreen()"></button></div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
+<script src="unlockPhone.js"></script>
+<script src="password.js"></script>
+<script src="keypad.js"></script>
+<script src="alarm.js"></script>
+<script src="bmi.js"></script>
+<script src="camera.js"></script>
+<script src="recharge.js"></script>
+<script src="music.js"></script>
+<script src="todo.js"></script>

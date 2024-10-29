@@ -1,0 +1,515 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*body {
+    width: 100%;
+    height: 100vh;
+}
+
+.holder {
+    margin-top: 30px;
+    /* margin: auto; */
+    display: flex;
+    justify-content: center;
+}
+
+.btnDiv button {
+    margin-top: 70px;
+    width: 10px;
+    height: 35px;
+    background-color: black;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#screen {
+    width: 100%;
+    height: 550px;
+    background-color: black;
+    border-radius: 25px;
+    border: 3px solid grey;
+    margin: auto;
+}
+
+#screen1 {
+    width: 100%;
+    height: 550px;
+    background-color: gray;
+    border-radius: 25px;
+    border: 3px solid black;
+    margin: auto;
+}
+
+#screen2 {
+    width: 100%;
+    height: 550px;
+    /* background-color:blue; */
+    background: url(iphone.jpeg);
+    background-size: contain;
+    /* background-repeat: no-repeat; */
+    border-radius: 25px;
+    border: 3px solid black;
+    margin: auto;
+}
+
+#screen3 {
+    width: 100%;
+    height: 550px;
+    /* background-color: aqua; */
+    background: url(iphone.jpeg);
+    background-size: contain;
+    border-radius: 25px;
+    border: 3px solid grey;
+    margin: auto;
+}
+
+.container {
+    width: 320px;
+    display: flex;
+    
+}
+
+nav {
+    z-index: 50;
+    display: flex;
+    /* background-color: red; */
+    justify-content: center;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin-top: 3px;
+    /* padding: 10px; */
+    /* height: 10px; */
+}
+
+.camera-div {
+    width: 130px;
+    height: 29px;
+    background-color: black;
+    border-radius: 30px;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.camera {
+    width: 26px;
+    height: 26px;
+    background-color: rgb(219, 207, 207);
+    border-radius: 100%;
+}
+
+.icon-div {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+#lock {
+    color: white;
+    font-size: 20px;
+}
+
+/* .mtn-div{
+    overflow: auto;
+    scroll-behavior: auto;
+    white-space: nowrap;
+    width: 40px;
+   
+} */
+.mtn-div p {
+    padding: 8px;
+    color: white;
+}
+
+/* .mtn-div::-webkit-scrollbar{
+    display: none;
+} */
+
+.time-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.time-div p {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+}
+
+.time-div h1 {
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.time-container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    align-items: center;
+    gap: 390px;
+}
+
+.low-bar button {
+    width: 85px;
+    height: 8px;
+    background-color: rgb(219, 207, 207);
+    border-radius: 30px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.pads {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: fit-content;
+    justify-content: center;
+    /* margin: auto; */
+    gap: 25px;
+    padding: 20px;
+}
+
+.pads button {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: white;
+    opacity: 0.5;
+    border: none;
+    font-size: 30px;
+    color: black;
+
+}
+
+.pads button:focus-within {
+    background-color: grey;
+}
+
+.pin-output {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.pin-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    border: 2px solid white;
+    text-align: center;
+}
+
+.home-screen {
+    z-index: 20;
+    width: 100%;
+    height: 500px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.apps {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+}
+
+/* .low-apps{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+} */
+.apps button {
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    border: none;
+    background-color: burlywood;
+}
+
+.apps button img {
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+}
+
+#calls,
+#alarm, #bmiCalc, #camera, #recharge, #music, #todo {
+    background-color: white;
+    width: 100%;
+    height: 515px;
+    display: flex;
+    gap: 16px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    justify-content: space-between;
+    overflow: auto;
+    /* margin-top: 10px; */
+}
+
+#back {
+    border: none;
+    background-color: transparent;
+}
+
+#back span {
+    font-size: 20px;
+}
+
+.dailer {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+    margin: auto;
+    gap: 20px;
+    /* padding-top: 20px; */
+}
+
+.dailer button {
+    width: 54px;
+    height: 54px;
+    border-radius: 100%;
+    background-color: gray;
+    /* opacity: 0.5; */
+    border: none;
+    font-size: 30px;
+    color: black;
+
+}
+
+.dailer-output {
+    width: 90%;
+    height: 90px;
+    background-color: white;
+    text-align: center;
+    /* margin: auto; */
+
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.dailer-output h3 {
+    overflow: hidden;
+    padding-top: 30px;
+    width: 300px;
+}
+
+.lower-pads {
+    display: flex;
+    justify-content: space-around;
+
+
+}
+
+.lower-pads button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.lower-pads span {
+    color: gray;
+}
+
+#calling {
+    width: 100%;
+    height: 510px;
+    background-color: white;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    /* gap: 50px; */
+    justify-content: space-between;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+#calling img {
+    width: 50px;
+    height: 50px;
+}
+
+#calling button {
+    background-color: transparent;
+    border: none;
+}
+
+#myKeys {
+    height: 470px;
+}
+
+#myContacts,
+#alarmHolder, #stopwatch {
+    width: 100%;
+    height: 450px;
+    background-color: white;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+}
+
+.contact input {
+    width: auto;
+    height: 30px;
+    background-color: wheat;
+    border: none;
+    border-radius: 25px;
+
+}
+
+#cont-span {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#forms {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#lists li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    background-color: wheat;
+    border-bottom: 2px solid grey;
+}
+
+#lists span {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#alarmHolder h2 {
+    font-size: 25px;
+    color: red;
+    font-weight: 600;
+}
+
+#alarmHolder form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#myAlarms{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.bmi-holder{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    /* background-color: gold; */
+    align-items: center;
+}
+.details img{
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+}
+#music-holder{
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    /* justify-content: space-between; */
+    background-color: aquamarine;
+}
+#list{
+    z-index: 10;
+    top: 0;
+    display: none;
+    background-color: firebrick;
+    overflow-y: auto;
+}
+.progress{
+    background-color: red;
+    width: 150px;
+    height: 20px;
+}
+#progress-bar{
+    background-color: white;
+    height: 5px;
+
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+.todo-app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 20px;
+}
+.todo-app form{
+    display: flex;
+    flex-direction: column;
+    
+}
